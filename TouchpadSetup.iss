@@ -3,7 +3,7 @@ AppName=Touchpad Server
 AppVersion=1.3
 AppPublisher=Things & Stuff
 AppPublisherURL="www.thingsstuff.com"
-AppSupportURL="http://www.thingsstuff.com/2012/04/12/touchpad-a-computer-remote-control-for-android/"
+AppSupportURL="https://github.com/andydunkel/Touchpad/"
 DefaultDirName={pf}\Things & Stuff\Touchpad Server
 UninstallDisplayIcon="{app}\TouchpadServer.exe"
 UninstallDisplayName=Touchpad Server
@@ -12,6 +12,10 @@ SetupIconFile="Server\icon.ico"
 Compression=lzma2
 SolidCompression=yes
 OutputBaseFilename=TouchpadSetup
+
+
+SignTool=kSign /d $qTouchpad Server$q /du $qhttp://www.da-software$q /v $f
+SignedUninstaller=yes
       
 [Code]
 function IsServerRunning() : Boolean;
